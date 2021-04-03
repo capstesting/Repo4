@@ -5,10 +5,11 @@ import pytest
 
 @pytest.fixture()
 def setup(request):
-    #Changes made to conftest by Y
+    # Changes made to conftest by Y
+
     driver = webdriver.Chrome(executable_path='E:\Python\Selenium\chromedriver.exe')
     driver.get('https://www.seleniumeasy.com/test/')
     driver.maximize_window()
     sleep(3)
     driver.find_element_by_xpath('//a[@id="at-cv-lightbox-close"]').click()
-    request.cls.driver=driver
+    request.cls.driver = driver
