@@ -5,6 +5,7 @@ import pytest
 
 @pytest.fixture()
 def setup(request):
+    #Changes made to conftest by Y
     driver = webdriver.Chrome(executable_path='E:\Python\Selenium\chromedriver.exe')
     driver.get('https://www.seleniumeasy.com/test/')
     driver.maximize_window()
